@@ -160,12 +160,17 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * _moveSpeed;
             }
         }
-        else if(_movingObjectRBReference != null)
+        else if (_movingObjectRBReference != null)    //Esto ajusta bien el limite de velocidad al etar en una plataforma q se mueve, pero el salto se reduce nose xq
         {
-            if (rb.velocity.magnitude > _moveSpeed + _movingObjectRBReference.velocity.magnitude)
+            Vector3 flatVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+
+            //limits velocity if needed
+            if (flatVel.magnitude > _moveSpeed + _movingObjectRBReference.velocity.magnitude)
             {
-                rb.velocity = rb.velocity.normalized * (_moveSpeed + _movingObjectRBReference.velocity.magnitude);
+                Vector3 limitedVel = flatVel.normalized * (_moveSpeed + Mathf.Max(_movingObjectRBReference.velocity.x, _movingObjectRBReference.velocity.z));
+                rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z); //Esto no limita la velocidad en Y, por ende se puede caer muy rapido.
             }
+
         }
         else
         {

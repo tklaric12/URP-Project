@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50580
+  m_Name: pb_Mesh27814
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1046,7 +1046,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212493870}
-  m_LocalRotation: {x: 0.04120564, y: -0.000000017325553, z: 7.145174e-10, w: 0.9991507}
+  m_LocalRotation: {x: 0.04120564, y: 0.000000017325556, z: -7.145175e-10, w: 0.9991507}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1343,7 +1343,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.02099727, y: -0.0000000021503235, z: 4.516087e-11, w: 0.9997795}
+  m_LocalRotation: {x: 0.02099727, y: 0.0000000021503235, z: -4.516087e-11, w: 0.9997795}
   m_LocalPosition: {x: -10.082668, y: 8.797778, z: -64.879715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4575,7 +4575,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850779034}
-  m_LocalRotation: {x: 0.02099727, y: -0.0000000010751617, z: 2.2580436e-11, w: 0.9997796}
+  m_LocalRotation: {x: 0.02099727, y: 0.0000000010751617, z: -2.2580436e-11, w: 0.9997796}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7495,7 +7495,7 @@ MonoBehaviour:
   _jumpForce: 15
   _jumpCooldown: 0.25
   _airMultiplier: 0.5
-  _groundDrag: 7
+  _groundDrag: 8
   jumpKey: 32
   sprintKey: 304
   _groundCheckTransform: {fileID: 2030054514}
