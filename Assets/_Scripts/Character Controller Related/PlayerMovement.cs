@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float _sprintSpeed;
     float _moveSpeed;
 
+    private bool isDashing;
+    public float dashSpeed;
+    public float dashSpeedChangeFactor;
+
+    [Header("Jumping")]
     [SerializeField] float _jumpForce;
     [SerializeField] float _jumpCooldown;
     bool _isReadyToJump;
@@ -47,10 +52,19 @@ public class PlayerMovement : MonoBehaviour
 
     private MovementState _movementState;
 
+    private float _desiredMoveSpeed;
+    private float _lastDesiredMoveSpeed;
+    private MovementState lastMovementState;
+    private bool isKeepingMomentum;
+    private float speedChangeFactor;
+
+    public bool IsDashing { get => isDashing; set => isDashing = value; }
+
     public enum MovementState
     {
         walking,
         sprinting,
+        dashing,
         air
     }
     private void Awake()
@@ -73,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
         
 
-        if (_isGrounded)
+        if (_movementState == MovementState.walking || _movementState == MovementState.sprinting)
         {
             Debug.Log("GROUNDED");
             rb.drag = _groundDrag;
@@ -135,21 +149,82 @@ public class PlayerMovement : MonoBehaviour
     }
     private void StateHandler()
     {
-        if(_isGrounded && Input.GetKey(sprintKey))
+        if(IsDashing)
+        {
+            _movementState = MovementState.dashing;
+            _desiredMoveSpeed = dashSpeed;
+            speedChangeFactor = dashSpeedChangeFactor;
+        }
+        else if(_isGrounded && Input.GetKey(sprintKey))
         {
             _movementState = MovementState.sprinting;
-            _moveSpeed = _sprintSpeed;
+            _desiredMoveSpeed = _sprintSpeed;
         }
         else if(_isGrounded)
         {
             _movementState = MovementState.walking;
-            _moveSpeed = _walkingSpeed;
+            _desiredMoveSpeed = _walkingSpeed;
         }
         else
         {
-            rb.AddForce(Physics.gravity * rb.mass); //GRAVEDAD EXTRA XQ SINO FLOTAS
+            if(rb.useGravity == true)
+            {
+                rb.AddForce(Physics.gravity * rb.mass); //GRAVEDAD EXTRA XQ SINO FLOTAS
+            }
+
             _movementState = MovementState.air;
+
+            if(_desiredMoveSpeed < _sprintSpeed)
+            {
+                _desiredMoveSpeed = _walkingSpeed;
+            }
+            else
+            {
+                _desiredMoveSpeed = _sprintSpeed;
+            }
         }
+
+        bool desiredMoveSpeedHasChanged = _desiredMoveSpeed != _lastDesiredMoveSpeed;
+        if (lastMovementState == MovementState.dashing)
+        {
+            isKeepingMomentum = true;
+        }
+        if (desiredMoveSpeedHasChanged)
+        {
+            if(isKeepingMomentum)
+            {
+                StopAllCoroutines();
+                StartCoroutine(SmoothlyLerpMoveSpeed());
+            }
+            else
+            {
+                _moveSpeed = _desiredMoveSpeed;
+            }
+        }
+
+        _lastDesiredMoveSpeed = _desiredMoveSpeed;
+        lastMovementState = _movementState;
+    }
+    private IEnumerator SmoothlyLerpMoveSpeed()
+    {
+        //smoothly lerps speed to desired value
+        float time = 0;
+        float difference = Mathf.Abs(_desiredMoveSpeed - _moveSpeed);
+        float startValue = _moveSpeed;
+
+        float boostFactor = speedChangeFactor;
+
+        while(time < difference)
+        {
+            _moveSpeed = Mathf.Lerp(startValue, _desiredMoveSpeed, time / difference);
+
+            time += Time.deltaTime * boostFactor;
+
+            yield return null;
+        }
+        _moveSpeed = _desiredMoveSpeed;
+        speedChangeFactor = 1f;
+        isKeepingMomentum = false;
     }
     private void SpeedControl()
     {

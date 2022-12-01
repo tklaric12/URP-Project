@@ -1046,7 +1046,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212493870}
-  m_LocalRotation: {x: 0.04120564, y: 0.000000017325556, z: -7.145175e-10, w: 0.9991507}
+  m_LocalRotation: {x: 0.04120564, y: -0.000000017325553, z: 7.145174e-10, w: 0.9991507}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1343,7 +1343,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.02099727, y: 0.0000000021503235, z: -4.516087e-11, w: 0.9997795}
+  m_LocalRotation: {x: 0.02099727, y: -0.0000000021503235, z: 4.516087e-11, w: 0.9997795}
   m_LocalPosition: {x: -10.082668, y: 8.797778, z: -64.879715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4575,7 +4575,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850779034}
-  m_LocalRotation: {x: 0.02099727, y: 0.0000000010751617, z: -2.2580436e-11, w: 0.9997796}
+  m_LocalRotation: {x: 0.02099727, y: -0.0000000010751617, z: 2.2580436e-11, w: 0.9997796}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7436,6 +7436,7 @@ GameObject:
   - component: {fileID: 1737836800}
   - component: {fileID: 1737836801}
   - component: {fileID: 1737836802}
+  - component: {fileID: 1737836803}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -7492,6 +7493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _walkingSpeed: 6
   _sprintSpeed: 10
+  dashSpeed: 20
+  dashSpeedChangeFactor: 35
   _jumpForce: 15
   _jumpCooldown: 0.25
   _airMultiplier: 0.5
@@ -7505,6 +7508,25 @@ MonoBehaviour:
     m_Bits: 1024
   _maxSlopeAngle: 70
   _orientation: {fileID: 1012932347}
+--- !u!114 &1737836803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737836799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97af5f65de102954daa532c6d353a539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _orientation: {fileID: 1012932347}
+  _playerCamera: {fileID: 0}
+  _dashForce: 14
+  _dashUpwardForce: 0
+  _dashDuration: 0.2
+  _dashCooldown: 2
+  dashKey: 101
 --- !u!43 &1759131912
 Mesh:
   m_ObjectHideFlags: 0
