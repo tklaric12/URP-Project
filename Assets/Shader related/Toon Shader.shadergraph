@@ -1477,10 +1477,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "063b3f1be4f84a55bacb2a8546f162c1",
     "m_Id": 623277733,
-    "m_DisplayName": "Light 1 Color",
+    "m_DisplayName": "Light Color",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Color",
+    "m_ShaderOutputName": "_Light_Color",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -1561,10 +1561,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "09a3774ecc214743b216456c266417f2",
     "m_Id": 623277733,
-    "m_DisplayName": "Light 1 Color",
+    "m_DisplayName": "Light Color",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Color",
+    "m_ShaderOutputName": "_Light_Color",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -1643,9 +1643,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "4c04ab18f71c42d9a7924e8fc1574c57"
-        },
-        {
             "m_Id": "d4b84b523afa4af2acaed2e830fa223b"
         },
         {
@@ -1662,6 +1659,9 @@
         },
         {
             "m_Id": "f45e4b90829742b59c54abc78ae7ea1a"
+        },
+        {
+            "m_Id": "4c04ab18f71c42d9a7924e8fc1574c57"
         },
         {
             "m_Id": "0eae7a3b14884851958a18cf9c686838"
@@ -1707,10 +1707,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "0eae7a3b14884851958a18cf9c686838",
     "m_Id": 623277733,
-    "m_DisplayName": "Light 1 Color",
+    "m_DisplayName": "Light Color",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Color",
+    "m_ShaderOutputName": "_Light_Color",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -1878,10 +1878,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "161020e540a948cf98afcc97a7eaab32",
     "m_Id": -1507274219,
-    "m_DisplayName": "Light 1 Direction",
+    "m_DisplayName": "Light Direction",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Direction",
+    "m_ShaderOutputName": "_Light_Direction",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -2072,9 +2072,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "f55fa09337184e8f97deb462f0d14b39"
-        },
-        {
             "m_Id": "68011a4acb3f48fa8e7f4f47a487e785"
         },
         {
@@ -2091,6 +2088,9 @@
         },
         {
             "m_Id": "952a57551ca14f698144e4a1e4c780aa"
+        },
+        {
+            "m_Id": "f55fa09337184e8f97deb462f0d14b39"
         },
         {
             "m_Id": "429fd411c2c64c8b8bb905e0087bd038"
@@ -2240,10 +2240,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "280ede704d46426db0275dd4894745a8",
     "m_Id": 623277733,
-    "m_DisplayName": "Light 1 Color",
+    "m_DisplayName": "Light Color",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Color",
+    "m_ShaderOutputName": "_Light_Color",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -2788,10 +2788,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "429fd411c2c64c8b8bb905e0087bd038",
     "m_Id": 623277733,
-    "m_DisplayName": "Light 1 Color",
+    "m_DisplayName": "Light Color",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Color",
+    "m_ShaderOutputName": "_Light_Color",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -2962,10 +2962,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "4c04ab18f71c42d9a7924e8fc1574c57",
     "m_Id": -1507274219,
-    "m_DisplayName": "Light 1 Direction",
+    "m_DisplayName": "Light Direction",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Direction",
+    "m_ShaderOutputName": "_Light_Direction",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -3296,9 +3296,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "7c0ac7ac18f142d4a41ba64d40828cca"
-        },
-        {
             "m_Id": "6d5cbc98badf4e8bb71bd7e2407ab8e7"
         },
         {
@@ -3315,6 +3312,9 @@
         },
         {
             "m_Id": "a217162251874b9e9838fc624610a08a"
+        },
+        {
+            "m_Id": "7c0ac7ac18f142d4a41ba64d40828cca"
         },
         {
             "m_Id": "280ede704d46426db0275dd4894745a8"
@@ -4030,9 +4030,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "161020e540a948cf98afcc97a7eaab32"
-        },
-        {
             "m_Id": "32ff0a54e18f42ac9334a196a5ea0908"
         },
         {
@@ -4049,6 +4046,9 @@
         },
         {
             "m_Id": "4ad7a79cf0404fbb93ad561c5eb2d658"
+        },
+        {
+            "m_Id": "161020e540a948cf98afcc97a7eaab32"
         },
         {
             "m_Id": "9f712250058a475ea8f8675da3b7ee94"
@@ -4265,10 +4265,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "7c0ac7ac18f142d4a41ba64d40828cca",
     "m_Id": -1507274219,
-    "m_DisplayName": "Light 1 Direction",
+    "m_DisplayName": "Light Direction",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Direction",
+    "m_ShaderOutputName": "_Light_Direction",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -4854,10 +4854,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "95a85e7f69f7431bbb1f684225e87a36",
     "m_Id": -1507274219,
-    "m_DisplayName": "Light 1 Direction",
+    "m_DisplayName": "Light Direction",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Direction",
+    "m_ShaderOutputName": "_Light_Direction",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -5033,9 +5033,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "c8ddb10ce61b4ea789850819f05b989d"
-        },
-        {
             "m_Id": "57b7e21ac8e046f8881ee7a2c4c68c22"
         },
         {
@@ -5052,6 +5049,9 @@
         },
         {
             "m_Id": "e5346dcaa3214a788a33ba690bd440f2"
+        },
+        {
+            "m_Id": "c8ddb10ce61b4ea789850819f05b989d"
         },
         {
             "m_Id": "09a3774ecc214743b216456c266417f2"
@@ -5343,10 +5343,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "9f712250058a475ea8f8675da3b7ee94",
     "m_Id": 623277733,
-    "m_DisplayName": "Light 1 Color",
+    "m_DisplayName": "Light Color",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Color",
+    "m_ShaderOutputName": "_Light_Color",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -6287,10 +6287,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "c8ddb10ce61b4ea789850819f05b989d",
     "m_Id": -1507274219,
-    "m_DisplayName": "Light 1 Direction",
+    "m_DisplayName": "Light Direction",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Direction",
+    "m_ShaderOutputName": "_Light_Direction",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -6637,9 +6637,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "95a85e7f69f7431bbb1f684225e87a36"
-        },
-        {
             "m_Id": "62ff7f2649434024bcd957adf1145e4a"
         },
         {
@@ -6656,6 +6653,9 @@
         },
         {
             "m_Id": "88784364784d46b097d3a954bd2ae612"
+        },
+        {
+            "m_Id": "95a85e7f69f7431bbb1f684225e87a36"
         },
         {
             "m_Id": "063b3f1be4f84a55bacb2a8546f162c1"
@@ -7659,10 +7659,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "f55fa09337184e8f97deb462f0d14b39",
     "m_Id": -1507274219,
-    "m_DisplayName": "Light 1 Direction",
+    "m_DisplayName": "Light Direction",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Light_1_Direction",
+    "m_ShaderOutputName": "_Light_Direction",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
