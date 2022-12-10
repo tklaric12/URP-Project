@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 6e114e94a6b75d84383ee47ff6542f1a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 04da03e593e61354d9797ab40be377a9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
@@ -64,9 +64,19 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 0, b: 0, a: 0}
-    - _L1_color: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_dir: {r: -0.881, g: 0.066, b: 0.46, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.30200002, g: 0.30200002, b: 0.30200002, a: 0.9019608}
+    - _L1_dir: {r: 0.69595766, g: 0.6427876, b: -0.32010478, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L5_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L6_dir: {r: 0, g: 0, b: 0, a: 0}
     - _Light_2_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Light_2_Direction: {r: 0, g: 0, b: 0, a: 0}
     - _Light_3_Color: {r: 0, g: 0, b: 0, a: 0}
