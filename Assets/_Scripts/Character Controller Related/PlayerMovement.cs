@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float _maxSlopeAngle; //si ya se pasa de cierto angulo, que se considere una pared
     private RaycastHit _slopeHit;
     private bool _isExitingSlope;
+    [SerializeField] Transform _playerObjOffsetReference; //para rotar esto y acomodar al player para escalar slopes
+    [SerializeField] LayerMask _layersToRotateTo;
 
     [SerializeField] Transform _orientation;
 
@@ -85,7 +87,9 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         StateHandler();
         SpeedControl();
-        
+        //RotateModelPerpendicularToSlope();
+
+
 
         if (_movementState == MovementState.walking || _movementState == MovementState.sprinting)
         {
@@ -130,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.AddForce(Vector3.down * 160f, ForceMode.Force);
             }
+
         }
         else if(_isGrounded)
         {
@@ -139,10 +144,12 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(_movingObjectRBReference.velocity * 10, ForceMode.Acceleration);
             }
             rb.AddForce(moveDirection.normalized * _moveSpeed * 10f, ForceMode.Force);
+
         }
         else
         {
             rb.AddForce(moveDirection.normalized * _moveSpeed * _airMultiplier * 10f, ForceMode.Force);
+
         }
 
         rb.useGravity = !IsOnSlope();
@@ -306,6 +313,22 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 GetSlopeMoveDirection()
     {
         return Vector3.ProjectOnPlane(moveDirection, _slopeHit.normal).normalized;
+    }
+    private void RotateModelPerpendicularToSlope() //ANDA PARA EL OJT. POR EL MOMENTO NO SE USA.
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(_playerObjOffsetReference.position, -Vector3.up, out hit, _playerHeight * 0.5f + 0.25f, _layersToRotateTo))
+        {
+            float angle = Vector3.Angle(Vector3.up, hit.normal);
+            if(angle < _maxSlopeAngle && angle != 0) //se hace chequeo de si estamos en slope. Si estamos, ajustamos rotacion del modeloffset para ser perpendicular a slope
+            {
+                _playerObjOffsetReference.rotation = Quaternion.FromToRotation(_playerObjOffsetReference.up, hit.normal) * _playerObjOffsetReference.rotation;
+            }
+            else
+            {
+                //_playerObjOffsetReference.rotation = Quaternion.identity //resetea la rotacion del offset a 0 ya que estamos en el piso y sin slope
+            }
+        }
     }
 
 }
